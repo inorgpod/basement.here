@@ -1,0 +1,27 @@
+$darkgrey:rgb(50, 50, 50);
+$mainwhite: rgb(230, 230, 230);
+
+.container{
+  justify-content: center;
+  align-items: center;
+  .circlewrap{
+    margin-top: 3rem;
+
+    .circle{
+      width: 30rem;
+      height: 30rem;
+      border-radius: 30rem;
+      background-color: $darkgrey;
+      margin: auto;
+      align-items: center;
+    }
+  }
+  h1{
+    color: rgb(230, 230, 230);
+    text-align: center;
+  }
+}
+
+#body {
+  background: rgb(255, 100, 10);
+}

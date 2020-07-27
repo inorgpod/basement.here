@@ -1,0 +1,12 @@
+$darkgrey:rgb(50, 50, 50);
+$mainwhite: rgb(230, 230, 230);
+
+.main-nav{
+  
+  margin-top: 2rem;
+  // background: $mainwhite;
+  a{
+
+    color:$darkgrey;
+  }
+}
