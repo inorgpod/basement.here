@@ -19,4 +19,5 @@ module ApplicationHelper
     markdown = Redcarpet::Markdown.new(renderer, markdown_options)
     raw markdown.render(text)
   end
+  
 end

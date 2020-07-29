@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   def index 
     @articles = Article.all.order('created_at DESC')
@@ -6,14 +7,17 @@ class ArticlesController < ApplicationController
 
 
   def new
-    # @article = current_user.articles.build
+    @article = Article.new
   end
 
   def create 
     @article = Article.new(article_params)
-    @article.save 
-
-    redirect_to @article
+    
+    if @article.save 
+      redirect_to @article
+    else 
+      render 'new' #如果沒有存取成功,會渲染一樣的new畫面，這樣頁面的資料不會被洗掉導致需要重新輸入
+    end
   end
 
 

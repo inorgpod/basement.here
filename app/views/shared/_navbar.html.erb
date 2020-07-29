@@ -3,12 +3,17 @@
     <a class="nav-link active" href="http://localhost:3000">HOME</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://github.com/inorgpod" target="_blank"><img src="./icon/icons8-octocat.svg" alt=""></a>
+    <a class="nav-link" href="https://github.com/inorgpod" target="_blank"><img src="/icon/icons8-octocat.svg" alt=""></a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="http://localhost:3000/articles">BLOG</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
+
+<% if current_user%> 
+  <div class="btn"><%= link_to("Log Out", destroy_user_session_path, method: :delete) %> </div>
+<%end%>
+
+<% if !user_signed_in?%>
+   <div class="btn"><%= link_to("Sign In", user_session_path ) %> </div>
+<%end%>
 </ul>
