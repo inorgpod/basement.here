@@ -1,23 +1,26 @@
 module ApplicationHelper
-  def to_markdown(text)
-    html_render_options = {
-      filter_html:     true, # no input tag or textarea
-      hard_wrap:       true,
-      link_attributes: { rel: 'nofollow' }
+  class HTML < Redcarpet::Render::HTML
+    include Rouge::Plugins::Redcarpet
+  end
+  def markdown(text)
+    render_options = {
+      # filer_html: true, 
+      hard_wrap: true,
+      link_attributes: { rel: 'nofollow' },
+      prettify: true
     }
-
-    markdown_options = {
-      autolink:           true,
+    renderer = HTML.new(render_options)
+    extras = {
+      autolink: true,
+      no_intra_emphasis: true,
+      disable_indented_code_blocks: true,
       fenced_code_blocks: true,
-      lax_spacing:        true,
-      no_intra_emphasis:  true,
-      strikethrough:      true,
-      superscript:        true
+      strikethrough: true,
+      superscript: true,
+      lax_spacing: true
     }
-
-    renderer = Redcarpet::Render::HTML.new(html_render_options)
-    markdown = Redcarpet::Markdown.new(renderer, markdown_options)
+ 
+  markdown = Redcarpet::Markdown.new(renderer, extras)
     raw markdown.render(text)
   end
-  
 end

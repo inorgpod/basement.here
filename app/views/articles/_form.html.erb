@@ -7,7 +7,9 @@
 
     <p>
       <%= f.label :body %>
-      <%= f.text_area :body %>
+      <%# <%= f.text_area :body %> %>
+       <strong>Body:</strong>
+      <%= markdown(@article.body) %>
     </p>
 
     <p>

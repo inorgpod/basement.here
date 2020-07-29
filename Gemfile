@@ -20,9 +20,12 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'redcarpet', '~> 3.5'
 
+gem 'rouge', '~> 3.3'
+
 gem 'devise', '~> 4.7', '>= 4.7.2'
 
 gem 'activeadmin', '~> 2.7'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
