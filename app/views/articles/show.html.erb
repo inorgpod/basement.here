@@ -12,7 +12,7 @@
 
 
 
-<%= link_to 'Back' , articles_path%>
+<%= link_to 'Back' , articles_path %>
 <% if current_user%> 
   <%= link_to 'Edit', edit_article_path(@article), class:'button' %>
   <%= link_to 'Delete', article_path(@article), method: :delete, data:{confirm: "Are you sure?"},class:'button' %>
@@ -21,6 +21,6 @@
 
 <h2><%=@article.comments.count%> Comments</h2>
 <%= render @article.comments%> 
-
+<h3><%= @article.user.email %></h3>
 <h2>ADD A Comment</h2>
 <%= render 'comments/form'%> 

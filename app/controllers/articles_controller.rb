@@ -7,11 +7,11 @@ class ArticlesController < ApplicationController
 
 
   def new
-    @article = Article.new
+     @article = current_user.articles.build
   end
 
   def create 
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
     
     if @article.save 
       redirect_to @article
@@ -51,6 +51,11 @@ class ArticlesController < ApplicationController
   private 
   def set_article
     @article = Article.find(params[:id])
+  end
+  
+  def authorized_user
+    @article = current_user.articles.find_by(id: params[:id])
+    redirect_to articles_path, notice: "Not authorized to edit this article" if @article.nil?
   end
 
   def article_params
