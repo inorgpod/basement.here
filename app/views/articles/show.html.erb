@@ -1,17 +1,19 @@
-<%= markdown(@article.body) %>
 <div class='title'>
-  <%= @article.title %>
+  <h3><%= @article.title %></h3>
 </div>
 
+<div class='body'>
+<%= markdown(@article.body) %>
+</div>
 
 <p class='date'>
   <%= @article.created_at %>
 </p>
 
-<p class='body'>
-  <%= @article.body %>
-</p>
-
 
 
 <%= link_to 'Back' , articles_path%>
+<% if current_user%> 
+  <%= link_to 'Edit', edit_article_path(@article), class:'button' %>
+  <%= link_to 'Delete', article_path(@article), method: :delete, data:{confirm: "Are you sure?"},class:'button' %>
+<%end%>

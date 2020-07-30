@@ -25,6 +25,29 @@ class ArticlesController < ApplicationController
     @article =Article.find(params[:id])
   end
 
+  def edit
+    @article =Article.find(params[:id]) 
+  end 
+
+  def update
+    @article =Article.find(params[:id]) 
+
+    if @article.update(params[:article].permit(:title, :body))
+      redirect_to @article
+    else
+      render 'edit'
+    end
+  end
+
+
+  def destroy 
+    @article = Article.find(params[:id])
+    @article.destroy
+    flash[:notice] = "Article was deleted!"
+    redirect_to articles_path
+  end
+
+
   private 
   def set_article
     @article = Article.find(params[:id])
