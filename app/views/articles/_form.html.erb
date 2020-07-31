@@ -1,4 +1,10 @@
-<%= form_for @article do |f|%>
+<%= form_for @article do |f|%> 
+  <h2> <%= pluralize(@article.errors.count, "error")%> prevented this post from saving</h2>
+    <ul> 
+      <% @article.errors.full_messages.each do |msg|%>
+        <li> <%= msg %> </li>
+      <%end%>
+    </ul>
     <p>
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -15,5 +21,11 @@
     <p>
       <%= f.submit %>
     </p>
+
+    
   
   <%end%>
+
+
+
+ 
