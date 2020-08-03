@@ -1,19 +1,20 @@
 <ul class="nav justify-content-center main-nav">
   <li class="nav-item">
-    <a class="nav-link active" href="http://localhost:3000">HOME</a>
+    <%= link_to 'HOME', root_path, class: 'btn-nav'%>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="https://github.com/inorgpod" target="_blank"><img src="/icon/icons8-octocat.svg" alt=""></a>
+    <a class="nav-link btn-nav" href="https://github.com/inorgpod" target="_blank">GitHub</a>
+    <%# <img src="/icon/icons8-octocat.svg" alt=""> %>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="http://localhost:3000/articles">BLOG</a>
+    <%= link_to 'BLOG', articles_path, class: 'btn-nav'%>
   </li>
 
 <% if current_user%> 
-  <div class="btn"><%= link_to("Log Out", destroy_user_session_path, method: :delete) %> </div>
+  <li class="nav-item"><%= link_to("BYE", destroy_user_session_path, method: :delete, class:'btn  btn-nav') %> </li>
 <%end%>
 
 <% if !user_signed_in?%>
-   <div class="btn"><%= link_to("Sign In", user_session_path ) %> </div>
+   <li class="nav-item" ><%= link_to("GO!", user_session_path, class:'btn  btn-nav' ) %> </li>
 <%end%>
 </ul>

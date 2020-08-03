@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@800&family=Rubik+Mono+One&display=swap");
+
+.row {
+  justify-content: center;
+  align-items: center;
+  .arti-wrap {
+    border: solid #333.5rem;
+    width: 120rem;
+    height: 40rem;
+    margin-bottom: 4rem;
+    box-shadow: 1.5rem 1.5rem #333;
+    background-color: green;
+    .arti-title {
+      width: 60rem;
+      border-right: solid #333.5rem;
+      background-color: purple;
+      height: 39rem;
+      padding-top: 2rem;
+      padding-left: 2rem;
+      .title {
+        font-size: 5rem;
+      }
+      .date {
+        font-size: 3rem;
+      }
+      .zig-date-bottom:after {
+        background: linear-gradient(-45deg, transparent 16px, white 0),
+          linear-gradient(45deg, transparent 16px, white 0);
+        background-repeat: repeat-x;
+        // background-position: left bottom;
+        background-size: 22px 32px;
+        content: "";
+        display: block;
+
+        width: 20rem;
+        height: 32px;
+
+        position: relative;
+        top: 64px;
+        left: 0px;
+      }
+      .zig-date-top:before {
+        background: linear-gradient(-45deg, white 16px, transparent 0),
+                   linear-gradient(45deg, white 16px, transparent 0);
+        background-position: left top;
+        background-repeat: repeat-x;
+        background-size: 22px 32px;
+        content: " ";
+        display: block;
+
+        height: 32px;
+        width: 20rem;
+
+        position: relative;
+        bottom: 64px;
+        left: 0;
+      }
+      .zig-date-bottom {
+        width: 20rem;
+        margin: 32px 0;
+        margin-top: 0;
+        background: red;
+      }
+      .zig-date-top {
+        width: 20rem;
+        margin: 32px 0;
+        margin-bottom: 0;
+        background: red;
+      }
+      .zig-date-top,
+      .zig-date-bottom {
+        padding: 32px 0;
+      }
+    }
+  }
+}

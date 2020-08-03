@@ -1,1 +1,1 @@
-import '.sketch.js'
+import 'sketch.js'

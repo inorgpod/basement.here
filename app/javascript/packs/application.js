@@ -9,9 +9,15 @@ require("@rails/activestorage").start()
 require("channels")
 
 require('bootstrap');
+
 //e定要加下面這兩段才會動bootstrap
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
+
+// import 'sketch.js'
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
