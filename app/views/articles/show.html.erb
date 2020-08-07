@@ -1,5 +1,8 @@
-
+<div class='arti-date'>
+  <%=@article.created_at.strftime ('%B, %d, %Y')%>
+</div>
 <div class='arti-body'>
+
   <div class='title'>
     <h3><%= @article.title %></h3>
   </div>
@@ -9,9 +12,7 @@
   </div>
 </div>
 
-<p class='date'>
-  <%= @article.created_at %>
-</p>
+
 
 
 

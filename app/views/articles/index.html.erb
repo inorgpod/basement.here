@@ -1,15 +1,15 @@
-
-<div class= row>
   <% if current_user%>
-  <div class="btn"><%= link_to "New Post", new_article_path %></div>
+    <div class="post-btn"><%= link_to "New Post", new_article_path %></div>
   <%end%>
+  
+<div class= row>
   <% @articles.each do |article|%>
   <div class="arti-date">
     <div class = 'date'> <%=article.created_at.strftime ('%B, %d, %Y')%> </div>
   </div>
-          <div class="arti-frame ">
-      
-        
+   
+
+    <div class="arti-frame ">
       <div class="arti-title">
         <div class = 'title'> 
           <p>
@@ -22,10 +22,13 @@
         <%= markdown(article.body) %>
       </div>
         
-        
-        
       <div class= arti-pic>
+        <% if article.title?%>
+        <p>pic here</p>
+        <%end%>
       </div>
-    </div>
+    </div> 
+    <div class='arti-read'> <p>read </p></div>
     <%end%>
+    
 </div>

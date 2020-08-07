@@ -1,23 +1,20 @@
-$darkgrey:rgb(50, 50, 50);
+$darkgrey: rgb(50, 50, 50);
 $mainwhite: rgb(230, 230, 230);
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@800&family=Rubik+Mono+One&display=swap');
-.container{
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@800&family=Rubik+Mono+One&display=swap");
+.container {
   margin-top: 20rem;
-  // justify-content: center;
-  // align-items: center;
 
-  
-  .hello{
-    color: rgb(83,63,251);
+  .hello {
+    color: rgb(83, 63, 251);
     background: -webkit-radial-gradient(#533ffb, #fc4646);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     font-size: 20rem;
-    
+
     vertical-align: middle;
     font-weight: 900;
-    font-family: 'Rubik Mono One', sans-serif;
+    font-family: "Rubik Mono One", sans-serif;
   }
 }
 
@@ -25,46 +22,44 @@ $mainwhite: rgb(230, 230, 230);
   background: rgb(234, 234, 234);
   justify-content: center;
   align-items: center;
-  
 }
 
-.arti-body{
-
+.arti-body {
   background: rgb(234, 234, 234);
   border: solid 1rem $darkgrey;
   // padding: 3rem;
-  .title{
-    width: 109rem;
+  .title {
+    font-weight: 800;
+    font-family: "Baloo Thambi 2", cursive;
+    
     background-color: #fc4646;
     border-bottom: solid 1rem $darkgrey;
     margin-bottom: 2rem;
     padding: 1rem;
     text-align: center;
 
-    h3{
-      font-size: 6rem;
+    h3 {
+      font-size: 8rem;
     }
   }
-  
-      .arti-markdown{
-        justify-content: center;
-        align-items: flex-start;
-        margin: 5rem;
-        h1,h2,h3,h4,h5,h6{
-          text-align: start;
-        }
-        p{
-          
-      
-          img{
-            display: block;
-            // margin-left: auto;
-            // margin-right: auto;
-            width: 45rem;
-      
-          }
-        }
+
+  .arti-markdown {
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5rem;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-align: start;
+    }
+    p {
+      img {
+        display: block;
+        width: 45rem;
       }
+    }
+  }
 }
-
-
