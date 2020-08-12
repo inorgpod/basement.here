@@ -19,7 +19,9 @@
       </div>
         
       <div class="arti-content">
-        <%= markdown(article.body) %>
+        <div class="arti-content-body">
+          <%= markdown(article.body) %>
+        </div>
       </div>
         
       <div class= arti-pic>
@@ -28,7 +30,8 @@
         <%end%>
       </div>
     </div> 
-    <div class='arti-read'> <p>read </p></div>
+    <div class='arti-read btn'> 
+    <p>read </p></div>
     <%end%>
     
 </div>
