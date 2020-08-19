@@ -17,7 +17,7 @@ import $ from 'jquery'
 window.jQuery = $
 window.$ = $
 
-// import 'sketch.js'
+import './dropzone.js'
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

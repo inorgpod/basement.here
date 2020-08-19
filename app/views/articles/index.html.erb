@@ -4,10 +4,11 @@
   
 <div class= row>
   <% @articles.each do |article|%>
-  <div class="arti-date">
-    <div class = 'date'> <%=article.created_at.strftime ('%B, %d, %Y')%> </div>
-  </div>
-   
+    
+    <div class="arti-date">
+      <div class = 'date'> <%=article.created_at.strftime ('%B, %d, %Y')%> </div>
+    </div>
+
 
     <div class="arti-frame ">
       <div class="arti-title">
@@ -24,14 +25,30 @@
         </div>
       </div>
         
-      <div class= arti-pic>
+      <div class= "arti-pic">
+      
+<% article.covers.each do |cover| %>
+      <%= image_tag cover %>
+    <% end %>
+
         <% if article.title?%>
-        <p>pic here</p>
+
+          
+
+
+        
+          <form action="/file-upload"
+                class="dropzone"
+                id="my-awesome-dropzone">
+          </form>
+          <p>pic here</p>
+
         <%end%>
       </div>
     </div> 
-    <div class='arti-read btn'> 
-    <p>read </p></div>
+      <%= link_to "read" , article_path(article), class:'btn arti-read'%>
+    
+  
     <%end%>
     
 </div>

@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
 
   def new
-     @article = current_user.articles.build
+      @article = current_user.articles.build
   end
 
   def create 
@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
   def update
     @article =Article.find(params[:id]) 
 
-    if @article.update(params[:article].permit(:title, :body))
+    if @article.update(params[:article].permit(:title, :body, covers:[]))
       redirect_to @article
     else
       render 'edit'
@@ -59,7 +59,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body, :user)
+    params.require(:article).permit(:title, :body, :user, covers:[])
   end
 
 end
