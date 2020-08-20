@@ -12,10 +12,7 @@
   </div> 
 </div>
 
-  <% @article.covers.each do |cover| %>
-      <%= image_tag cover %>
-    <% end %>
-
+  
 
 <%= link_to 'Back' , articles_path %>
 <% if current_user%> 
