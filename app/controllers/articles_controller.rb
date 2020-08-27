@@ -23,6 +23,7 @@ class ArticlesController < ApplicationController
 
   def show 
     @article =Article.find(params[:id])
+    @articles = Article.all.order('created_at DESC')
   end
 
   def edit

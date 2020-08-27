@@ -11,10 +11,12 @@
     <%= markdown(@article.body) %>
   </div> 
 </div>
-
-  
-
-<%= link_to 'Back' , articles_path %>
+<%# @articles.each do |article|%>
+  <%#= link_to article.title, article%>
+  <%#end%>
+<div class= 'back-bt'>
+  <%= link_to 'Back' , articles_path, class:'back-to-arti' %>
+</div>
 <% if current_user%> 
   <%= link_to 'Edit', edit_article_path(@article), class:'button' %>
   <%= link_to 'Delete', article_path(@article), method: :delete, data:{confirm: "Are you sure?"},class:'button' %>
@@ -23,6 +25,6 @@
 
 <h2><%=@article.comments.count%> Comments</h2>
 <%= render @article.comments%> 
-<h3><%= @article.user.email %></h3>
-<h2>ADD A Comment</h2>
+<h3><%#= @article.user.email %></h3>
+<h2>Leave Me A Comment Here!</h2>
 <%= render 'comments/form'%> 
