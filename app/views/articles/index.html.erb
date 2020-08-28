@@ -44,14 +44,17 @@
 
     <div class= "arti-foot">
       <div class= "arti-read">
-        <%= link_to "read" , article_path(article), class:' read-bt'%>
+        <%= link_to "READ MORE" , article_path(article), class:' read-bt'%>
       </div> 
 
       <div class= "arti-tag">
-       Tags: <%= article.tag_list%>
-         
-       <%#= link_to "#RoR" , article_path(article), class:' tag-tag'%>
-       <%#= link_to "#tag" , article_path(article), class:' tag-tag'%>
+
+
+        <% article.tag_list.each do |t| %>
+          <%= link_to t, tag_path(tag: t), class: "tag-tag"%>
+        <% end %>
+
+      
       </div> 
     </div> 
 
