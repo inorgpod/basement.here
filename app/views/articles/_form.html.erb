@@ -10,10 +10,13 @@
       <%= f.button :submit %> 
       <%= f.label :title %> <br>
       <%= f.text_field :title, class: "form-control" %> 
+      <%= f.label :tag_list, "Tags (separated by commas)" %>
+      <%= f.text_field :tag_list %><br>
     </div>
 
       
       <%= f.text_area :body, class: "md-input", rows: 15, data: {provide: "markdown", extension: 'MD'} %> 
+
       <%= f.submit 'GO', class:'btn btn-primary', type:"submit"  %>
     <p>
     
@@ -21,7 +24,6 @@
 
     </p>
   </div>
-      
 
   </div>
     

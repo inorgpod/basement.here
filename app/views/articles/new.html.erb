@@ -17,11 +17,13 @@
       <%= f.label :title %> <br>
       <%= f.text_field :title, class: "form-control" %> 
     </div>
-            <%= f.text_area :body %> 
+            <%#= f.text_area :body %> 
             <%= f.file_field :covers, multiple: true %>
-            <%= f.button :submit %> 
-      <%#= f.text_area :body, class: "md-input", rows: 15, data: {provide: "markdown", extension: 'MD'} %> 
-      <%# <label class="checkbox">
+            <%= f.label :tag_list, "Tags (separated by commas)" %>
+      <%= f.text_field :tag_list %><br>
+            <%#= f.button :submit %> 
+      <%= f.text_area :body, class: "md-input", rows: 15, data: {provide: "markdown", extension: 'MD'} %> 
+      <%#= <label class="checkbox">
         <input name="publish" type="checkbox"> Publish
       </label> %>
     <hr/>

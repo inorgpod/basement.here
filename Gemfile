@@ -26,6 +26,8 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 
 gem 'activeadmin', '~> 2.7'
 
+gem 'activerecord', '~> 6.0', '>= 6.0.3.2'
+gem 'acts-as-taggable-on'
 
 
 # Use Redis adapter to run Action Cable in production

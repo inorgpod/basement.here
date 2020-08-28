@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   
   get "users/sign_up"
   get '/articles', to: 'articles#index'
+  get '/:tag', to: 'articles#index', as: :tag
 end

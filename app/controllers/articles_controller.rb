@@ -2,7 +2,11 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   def index 
-    @articles = Article.all.order('created_at DESC')
+    if params[:tag]
+      @articles = Article.tagged_with(params[:tag]) 
+    else
+      @articles = Article.all.order('created_at DESC')
+    end
   end
 
 
@@ -33,7 +37,7 @@ class ArticlesController < ApplicationController
   def update
     @article =Article.find(params[:id]) 
 
-    if @article.update(params[:article].permit(:title, :body, covers:[]))
+    if @article.update(params[:article].permit(:title, :body, :tag_list, covers:[]))
       redirect_to @article
     else
       render 'edit'
@@ -60,7 +64,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :body, :user, covers:[])
+    params.require(:article).permit(:title, :body, :user, :tag_list, covers:[])
   end
 
 end
