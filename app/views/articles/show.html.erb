@@ -5,6 +5,7 @@
 
   <div class='title'>
     <h3><%= @article.title %></h3>
+    
   </div>
   
   <div class="arti-markdown">
@@ -26,7 +27,7 @@
   <%= link_to 'Edit', edit_article_path(@article), class:'button' %>
   <%= link_to 'Delete', article_path(@article), method: :delete, data:{confirm: "Are you sure?"},class:'button' %>
 <%end%>
-
+<%= social_share_button_tag(@article.title) %>
 
 <h2><%=@article.comments.count%> Comments</h2>
 <%= render @article.comments%> 

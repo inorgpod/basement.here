@@ -29,6 +29,8 @@ gem 'activeadmin', '~> 2.7'
 gem 'activerecord', '~> 6.0', '>= 6.0.3.2'
 gem 'acts-as-taggable-on'
 
+gem 'social-share-button', '~> 1.2', '>= 1.2.3'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
