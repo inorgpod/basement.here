@@ -3,7 +3,8 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-//= require social-share-button
+
+require('packs/social-share-button.js.erb')
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -13,6 +14,7 @@ require('bootstrap');
 //e定要加下面這兩段才會動bootstrap
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
+
 import $ from 'jquery'
 window.jQuery = $
 window.$ = $
