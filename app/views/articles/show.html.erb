@@ -1,5 +1,5 @@
 <div class='arti-date'>
-  <%=@article.created_at.strftime ('%B, %d, %Y')%>
+    <div class = 'date'> <%=@article.created_at.strftime ('%B, %d, %Y')%> </div>
 </div>
 <div class='arti-body'>
 
@@ -11,14 +11,15 @@
   <div class="arti-markdown">
     <%= markdown(@article.body) %>
   </div> 
-</div>
-<%# @articles.each do |article|%>
-  <%#= link_to article.title, article%>
-  <%#end%>
-  
+
+  <div class='arti-tag'>
         <% @article.tag_list.each do |t| %>
           <%= link_to t, tag_path(tag: t), class: "tag-tag"%>
         <% end %>
+  </div>
+</div>
+
+  
 
 <div class= 'back-bt'>
   <%= link_to 'Back' , articles_path, class:'back-to-arti' %>
@@ -31,6 +32,5 @@
 
 <h2><%=@article.comments.count%> Comments</h2>
 <%= render @article.comments%> 
-<h3><%#= @article.user.email %></h3>
 <h2>Leave Me A Comment Here!</h2>
 <%= render 'comments/form'%> 

@@ -12,8 +12,8 @@ $mainwhite: rgb(230, 230, 230);
   border: solid 2rem #333;
 
   .btn-nav {
-    margin-left: 8rem;
-    margin-right: 8rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     border: solid 1rem;
     margin-bottom: 1.5rem;
     padding: 1rem;
@@ -30,6 +30,7 @@ $mainwhite: rgb(230, 230, 230);
     }
   }
   .home-logo {
+    margin-left: 3rem;
     width: 10rem;
     display: flex;
     flex-direction: row;
