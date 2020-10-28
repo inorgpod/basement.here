@@ -11,8 +11,8 @@
     bottom: 5rem;
   }
   .arti-date {
-    background-color: #00dbde;
-    background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    background-color: #dedede;
+    // background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
     border: solid #333 1rem;
     // border-style: dashed;
     padding: 2rem;
@@ -39,12 +39,12 @@
     .arti-title {
       border: solid #333 1rem;
       border-right: none;
-      background: rgb(252, 70, 70);
-      background: radial-gradient(
-        circle,
-        rgba(252, 70, 70, 1) 0%,
-        rgba(206, 255, 254, 1) 100%
-      );
+      background: #dedede;
+      // background: radial-gradient(
+      //   circle,
+      //   rgba(252, 70, 70, 1) 0%,
+      //   rgba(206, 255, 254, 1) 100%
+      // );
       grid-area: 1 / 1 / 2 / 5;
       .title {
         margin-top: 2rem;
@@ -66,12 +66,12 @@
 
     .arti-content {
       grid-area: 2 / 1 / 9 / 6;
-      background: rgb(255, 250, 5);
-      background: radial-gradient(
-        circle,
-        rgba(255, 250, 5, 1) 0%,
-        rgba(0, 255, 250, 1) 100%
-      );
+      background: #dedede;
+      // background: radial-gradient(
+      //   circle,
+      //   rgba(255, 250, 5, 1) 0%,
+      //   rgba(0, 255, 250, 1) 100%
+      // );
       border: solid #333 1rem;
       border-right: none;
       border-top: none;
@@ -110,12 +110,8 @@
       border: solid #333 1rem;
 
       grid-area: 1 / 5 / 9 / 9;
-      background: rgb(63, 251, 72);
-      background: radial-gradient(
-        circle,
-        rgba(63, 251, 72, 1) 0%,
-        rgba(255, 206, 206, 1) 71%
-      );
+      background: rgb(85,85,85);
+      background: radial-gradient(circle, rgba(85,85,85,1) 0%, rgba(222,222,222,1) 95%);
       img {
         width: 100%;
       }
@@ -125,7 +121,7 @@
       border: solid #333 1rem;
       border-top: solid #333 0rem;
       grid-area: 9/ 1 / 12 / 10;
-      background: rgb(63, 251, 72);
+      background:#dedede;
       justify-content: space-between;
       display: flex;
       .arti-read {
