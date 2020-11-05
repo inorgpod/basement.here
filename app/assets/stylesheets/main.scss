@@ -22,10 +22,11 @@ $mainwhite: rgb(230, 230, 230);
   background: rgb(234, 234, 234);
   justify-content: center;
   align-items: center;
-  cursor: url("http://localhost:3000/ok.ico"), auto;
+  // cursor: url("http://localhost:3000/ok.ico"), auto;
   
   a:hover{
-    cursor: url("http://localhost:3000/ok.ico"),auto;
+    // cursor: url("http://localhost:3000/ok.ico"),auto;
+    // cursor: ;
     text-decoration: none;
     }
 

@@ -1,23 +1,24 @@
-<ul class="nav justify-content-start  main-nav">
+<ul class="nav   main-nav">
     <%= link_to root_path do %>
-      <%=image_tag"/icon/original.png", class:'home-logo nav-item'%>
+      <%=image_tag"/icon/ii.svg", class:'home-logo nav-item'%>
     <%end%>
-  <li class="nav-item">
-    <%# <div><img src="./icon/original.png" alt=""></div> %>
-  </li>
+
   <li class="nav-item">
     <a class="nav-link btn-nav" href="https://github.com/inorgpod" target="_blank">GitHub</a>
-    <%# <img src="/icon/icons8-octocat.svg" alt=""> %>
   </li>
   <li class="nav-item">
     <%= link_to 'BLOG', articles_path, class: 'btn-nav'%>
   </li>
 
 <% if current_user%> 
-  <li class="nav-item"><%= link_to("BYE", destroy_user_session_path, method: :delete, class:'btn-nav') %> </li>
+  <li class="nav-item">
+    <%= link_to("BYE", destroy_user_session_path, method: :delete, class:'btn-nav') %> 
+  </li>
 <%end%>
 
 <% if !user_signed_in?%>
-   <li class="nav-item" ><%= link_to("GO!", user_session_path, class:'btn  btn-nav' ) %> </li>
+  <li class="nav-item" >
+    <%= link_to("GO!", user_session_path, class:'btn  btn-nav' ) %>
+  </li>
 <%end%>
 </ul>
