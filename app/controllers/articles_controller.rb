@@ -3,9 +3,11 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   def index 
     if params[:tag]
-      @articles = Article.tagged_with(params[:tag]) 
+      @pagy, @articles = pagy(Article.tagged_with(params[:tag]), items: 8)
+      # @articles = Article.tagged_with(params[:tag]) 原始寫法
     else
-      @articles = Article.all.order('created_at DESC')
+      @pagy,  @articles = pagy(Article.all.order('created_at DESC'), items: 8)
+      # @articles = Article.all.order('created_at DESC') 原始寫法
     end
   end
 

@@ -67,11 +67,6 @@
     .arti-content {
       grid-area: 2 / 1 / 9 / 6;
       background: #dedede;
-      // background: radial-gradient(
-      //   circle,
-      //   rgba(255, 250, 5, 1) 0%,
-      //   rgba(0, 255, 250, 1) 100%
-      // );
       border: solid #333 1rem;
       border-right: none;
       border-top: none;
@@ -88,8 +83,9 @@
       .arti-content-body {
         font-family: "Baloo Thambi 2", cursive;
 
-        img {
-          max-width: 51rem;
+        code {
+          color: #3d9b00;
+          background-color: #ffc107;
         }
       }
       .arti-read {
@@ -110,10 +106,14 @@
       border: solid #333 1rem;
 
       grid-area: 1 / 5 / 9 / 9;
-      background: rgb(85,85,85);
-      background: radial-gradient(circle, rgba(85,85,85,1) 0%, rgba(222,222,222,1) 95%);
+      background: rgb(85, 85, 85);
+      background: radial-gradient(
+        circle,
+        rgba(85, 85, 85, 1) 0%,
+        rgba(222, 222, 222, 1) 95%
+      );
       img {
-        width: 100%;
+        width: 65rem;
       }
     }
 
@@ -121,7 +121,7 @@
       border: solid #333 1rem;
       border-top: solid #333 0rem;
       grid-area: 9/ 1 / 12 / 10;
-      background:#dedede;
+      background: #dedede;
       justify-content: space-between;
       display: flex;
       .arti-read {
@@ -157,5 +157,14 @@
         }
       }
     }
+  }
+}
+.page-btn {
+  .pagy-bootstrap-nav {
+    // position: fixed;
+    // z-index: 999;
+    // background-color: blueviolet;
+    left: 5rem;
+    bottom: 5rem;
   }
 }

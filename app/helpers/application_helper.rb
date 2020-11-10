@@ -2,6 +2,7 @@ module ApplicationHelper
   require 'redcarpet'
   require 'rouge'
   require 'rouge/plugins/redcarpet'
+  include Pagy::Frontend
 
   class HTML < Redcarpet::Render::HTML
     include Rouge::Plugins::Redcarpet

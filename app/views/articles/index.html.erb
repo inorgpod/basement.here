@@ -35,10 +35,10 @@
         <% end %>
 
         <% if article.title?%>
-         <form action="/file-upload"
+          <form action="/file-upload"
                 class="dropzone"
                 id="my-awesome-dropzone">
-         </form>
+          </form>
         <%end%>
       </div>
 
@@ -64,4 +64,9 @@
   
     <%end%>
     
+</div>
+
+
+<div class= 'page-btn'>
+  <%= pagy_bootstrap_nav(@pagy).html_safe %>
 </div>

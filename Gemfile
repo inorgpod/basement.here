@@ -31,6 +31,7 @@ gem 'acts-as-taggable-on'
 
 gem 'social-share-button', '~> 1.2', '>= 1.2.3'
 
+gem 'pagy', '~> 3.9'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
